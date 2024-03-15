@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duurzaamhuis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -33,7 +39,7 @@
             </div>
         </section><!--navigationEND-->
 
-        <section class-="main"><!--main-->
+        <section class="main"><!--main-->
             <div class="search"><!--Search-->
 
                 <form action="">
@@ -103,34 +109,16 @@
                     </div>
                 </div><!--Boards3 End-->
 
-                <div class="boards"><!--Boards4 Energieverbruik Julnar-->
-                    <div class="category">
-                        <h2>Energie Verbruik</h2>
-                        <span class="material-symbols-outlined">
-                            more_vert
-                        </span>
-                    </div>
-                </div><!--Boards4 End-->
-
-                <div class="boards"><!--Boards5 Eigen Inbreng Julnar-->
-                    <div class="category">
-                        <h2>Eigen Inbreng</h2>
-                        <span class="material-symbols-outlined">
-                            more_vert
-                        </span>
-                    </div>
-                </div><!--Boards5 End-->
-
-                <div class="boards"><!--Boards6 Binnen buiten temperatuur Giorgina-->
+                <div class="boards"><!--Boards4 Binnen buiten temperatuur Giorgina-->
                     <div class="category">
                         <h2>Binnen/Buiten Temperatuur Meten</h2>
                         <span class="material-symbols-outlined">
                             more_vert
                         </span>
                     </div>
-                </div><!--Boards6 End-->
+                </div><!--Boards4 End-->
 
-                <div class="boards"><!--Boards7 zonsopkomst en ondergang Milan-->
+                <div class="boards"><!--Boards5 zonsopkomst en ondergang Milan-->
                     <div class="category">
                         <h2>De zonsopkomst en Zonsondergang</h2>
                         <p>Dashboard Weergave</p>
@@ -138,9 +126,9 @@
                             more_vert
                         </span>
                     </div>
-                </div><!--Boards7 End-->
+                </div><!--Boards5 End-->
 
-                <div class="boards"><!--Boards8 Zonnepanele opbrengst Milan-->
+                <div class="boards"><!--Boards6 Zonnepanele opbrengst Milan-->
                     <div class="category">
                         <h2>Opbrengt Zonnepanelen</h2>
                         <p>Per Maand</p>
@@ -148,9 +136,9 @@
                             more_vert
                         </span>
                     </div>
-                </div><!--Boards8 End-->
+                </div><!--Boards6 End-->
 
-                <div class="boards"><!--Boards9 Na een bepaalde tijd lamp uit Milan-->
+                <div class="boards"><!--Boards7 Na een bepaalde tijd lamp uit Milan-->
                     <div class="category">
                         <h2>Lamp Aan/Uit Zetten na een bepaalde tijd</h2>
                         <p>Zet lamp na 5 minuten uit</p>
@@ -158,13 +146,35 @@
                             more_vert
                         </span>
                     </div>
-                </div><!--Boards9 End-->
+                </div><!--Boards7 End-->
 
             </div><!--Boards List End-->
 
         </section><!--mainEND-->
 
         <section class-="secondary"><!--secondary-->
+
+            <div class="Inbreng"><!--Boards8 Eigen Inbreng Julnar-->
+                <h2>Eigen Inbreng</h2>
+                <p>Per categorie</p>
+                <div>
+                    <canvas id="eigenInbrengChart"></canvas>
+                </div>
+                <span class="material-symbols-outlined">
+                    more_vert
+                </span>
+            </div><!--Boards8 End-->
+
+            <div class="Verbruik"><!--Boards9 Energieverbruik Julnar-->
+                <h2>Energie Verbruik</h2>
+                <p>Energieverbruik Per Maand (kWh)</p>
+                <div>
+                    <canvas id="myChart"></canvas>
+                </div>
+                <span class="material-symbols-outlined">
+                    more_vert
+                </span>
+            </div><!--Boards9 End-->
 
         </section><!--secondaryEND-->
 
