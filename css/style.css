@@ -1,10 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -15,15 +15,49 @@ body{
 
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24;
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
 
   font-size: 24px;
 }
 
-.dashboard{
+.dashboard {
   padding: 0px 15px;
   margin: 0px auto;
+}
+
+/*== styled navigation ( vid 8  )==*/
+
+.dashboard .navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.dashboard .navigation img.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.dashboard .navigation img.user {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+
+.dashboard .navigation div .material-symbols-outlined {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 30px;
+  color: #727272;
+}
+
+.dashboard .navigation div  {
+  margin-top: 10px;
+
+
 }
