@@ -58,8 +58,6 @@ body {
 
 .dashboard .navigation div {
   margin-top: 10px;
-
-
 }
 
 /*== main dashboard (vid 9)==*/
@@ -92,7 +90,6 @@ body {
 
 .dashboard .main .search .notifaction span:nth-child(1) {
   margin-right: 15px;
-
 }
 
 
@@ -119,7 +116,19 @@ body {
 }
 
 .dashboard .main .title form select {
- border: none;
- font-size: 16px;
- background-color: rgba(0 0 0/ 0);
+  border: none;
+  font-size: 16px;
+  background-color: rgba(0 0 0/ 0);
 }
+
+/*project list*/
+.dashboard .main .boards_list h2 {
+  font-size: 20px;
+  line-height: 0;
+  margin-bottom: 5px;
+}
+
+.dashboard .main .boards_list p {
+  color: #727272;
+}
+

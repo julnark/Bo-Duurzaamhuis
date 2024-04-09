@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             labels: ['Elektra', 'Gas', 'Water', 'Hypotheek'],
             datasets: [{
                 label: 'Mijn Eigen Inbreng',
-                data: [65, 42, 32, 18], // Vul hier je eigen gegevens in (bijvoorbeeld: 70% eigen bijdrage, 30% andere bronnen)
+                data: [65, 42, 32, 18],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.5)', // Rood
                     'rgba(54, 162, 235, 0.5)', // Lichtblauw
