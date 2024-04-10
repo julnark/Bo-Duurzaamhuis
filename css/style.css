@@ -125,10 +125,59 @@ body {
 .dashboard .main .boards_list h2 {
   font-size: 20px;
   line-height: 0;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .dashboard .main .boards_list p {
   color: #727272;
 }
 
+.dashboard .main .boards_list .boards {
+  padding: 20px 20px 20px 60px;
+  background: white;
+  box-shadow: 1px 1px 40px rgba(0, 0, 0, .1);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.dashboard .main .boards_list .boards .category {
+  width: 20px;
+  height: 50px;
+  background-color: rebeccapurple;
+  border-radius: 0px 10px 10px 0px;
+  position: absolute;
+  left: 0;
+}
+
+.dashboard .main .boards_list .boards .material-symbols-outlined {
+  margin-bottom: 20px;
+}
+
+.category_color1 {
+  background-color: #4F6F52 !important;
+}
+
+.category_color2 {
+  background-color: #739072 !important;
+}
+
+.category_color3 {
+  background-color: #86A789 !important;
+}
+
+.category_color4 {
+  background-color: #C3E2C2 !important;
+}
+
+.category_color5 {
+  background-color: #527853 !important;
+}
+
+.category_color6 {
+  background-color: #D2E3C8 !important;
+}
+
+.category_color7 {
+  background-color: #EAECCC !important;
+}

@@ -10,32 +10,32 @@ document.addEventListener('DOMContentLoaded', function () {
                 label: 'Mijn Energie Verbruik',
                 data: [83, 72, 64, 78, 85, 68, 91, 77, 62, 79, 73, 88, 75],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(255, 205, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(128, 0, 128, 0.2)',
-                    'rgba(50, 205, 50, 0.2)',
-                    'rgba(255, 0, 255, 0.2)',
-                    'rgba(255, 255, 0, 0.2)',
-                    'rgba(0, 255, 255, 0.2)',
-                    'rgba(201, 203, 207, 0.2)'
+                    '#4F6F52',
+                    '#739072',
+                    '#86A789',
+                    '#D2E3C8',
+                    '#5F8670',
+                    '#C3E2C2',
+                    '#EAECCC',
+                    '#527853',
+                    '#5F6F52',
+                    '#A9B388',
+                    '#C7DCA7',
+                    '#9FBB73'
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132)',
-                    'rgba(255, 159, 64)',
-                    'rgba(255, 205, 86)',
-                    'rgba(75, 192, 192)',
-                    'rgba(54, 162, 235)',
-                    'rgba(153, 102, 255)',
-                    'rgba(128, 0, 128)',
-                    'rgba(50, 205, 50)',
-                    'rgba(255, 0, 255)',
-                    'rgba(255, 255, 0)',
-                    'rgba(0, 255, 255)',
-                    'rgba(201, 203, 207)'
+                    '#405D42',
+                    '#5A7E5E',
+                    '#6E9470',
+                    '#B9D0B2',
+                    '#4B725C',
+                    '#A9D9AC',
+                    '#D6D4B3',
+                    '#3E5B42',
+                    '#4B5D42',
+                    '#92A273',
+                    '#ADC491',
+                    '#879A5E'
                 ],
                 borderWidth: 1
             }]
@@ -61,16 +61,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 label: 'Mijn Eigen Inbreng',
                 data: [65, 42, 32, 18],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.5)', // Rood
-                    'rgba(54, 162, 235, 0.5)', // Lichtblauw
-                    'rgba(255, 205, 86, 0.5)', // Geel
-                    'rgba(75, 192, 192, 0.5)' // Cyaan
+                    '#627254',
+                    '#76885B',
+                    '#B0C5A4',
+                    '#CCD3CA',
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)', // Rood
-                    'rgba(54, 162, 235, 1)', // Lichtblauw
-                    'rgba(255, 205, 86, 1)', // Geel
-                    'rgba(75, 192, 192, 1)' // Cyaan
+                    '#4E5F42',
+                    '#5E7049',
+                    '#99AE8F',
+                    '#B3B9B0',
                 ],
                 borderWidth: 1
             }]
