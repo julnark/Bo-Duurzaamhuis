@@ -277,7 +277,6 @@ body {
 /*  giorgina lamp aan en uit zetten*/
 .boards label {
   position: relative;
-  top: -150px;
   width: 150px;
   height: 75px;
   background: #212121;
@@ -326,11 +325,13 @@ body {
   height: 408px;
   pointer-events: none;
   background: url(/img/bulb_off.jpg);
+  background: url(/Bo-Duurzaamhuis/img/bulb_off.jpg);
   transition: 0.5s;
 }
 
 .boards label input:checked ~ .bulb{
   background: url(/img/bulb_on.jpg);
+  background: url(/Bo-Duurzaamhuis/img/bulb_on.jpg);
 }
 
 /*Media Query */
