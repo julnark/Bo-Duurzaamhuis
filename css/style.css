@@ -277,6 +277,9 @@ body {
 /*  giorgina lamp aan en uit zetten*/
 .boards label {
   position: relative;
+  width: 150px;
+  height: 75px;
+  background: #212121;
   border-radius: 10px;
 }
 
@@ -318,17 +321,16 @@ body {
   width: 348px;
   height: 408px;
   pointer-events: none;
-  background: url(../img/bulb_off.jpg);
+  background: url(/img/bulb_off.jpg);
+  background: url(/Bo-Duurzaamhuis/img/bulb_off.jpg);
   transition: 0.5s;
   margin-top: 0px;
   border-radius: 8px;
 } 
 
-.boards input:checked ~ .bulb{
-  background: url(../img/bulb_on.jpg);
-}
-.boards input {
-  display: none;
+.boards label input:checked ~ .bulb{
+  background: url(/img/bulb_on.jpg);
+  background: url(/Bo-Duurzaamhuis/img/bulb_on.jpg);
 }
 
 /*Media Query */
