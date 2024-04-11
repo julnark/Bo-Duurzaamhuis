@@ -216,11 +216,6 @@ body {
 
 }
 
-#myChart{
-  height: auto;
-  width: 100%;
-}
-
 .dashboard .secondary .chart .category {
   width: 20px;
   height: 50px;
