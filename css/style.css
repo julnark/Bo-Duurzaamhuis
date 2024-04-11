@@ -10,7 +10,7 @@ body {
   font-style: normal;
   margin: 0px;
   background-color: aliceblue;
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .material-symbols-outlined {
@@ -286,6 +286,70 @@ body {
   background: #DAEAF1;
 }
 
+
+/*  giorgina lamp aan en uit zetten*/
+
+.boards label {
+  position: relative;
+  top: -150px;
+  width: 150px;
+  height: 75px;
+  background: #212121;
+  border-radius: 10px;
+}
+
+.boards label span {
+  position: absolute;
+  top: 0;
+  left: center;
+  width: 75px;
+  height: 75px;
+  background: #333;
+  border: 6px solid #212121;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boards label input:checked~span {
+  left: 75px;
+  transition: 0.5s;
+}
+
+
+.boards label span ion-icon {
+  color: rgb(255, 255, 255, 0.25);
+  font-size: 2em;
+  transition: 0.5s;
+
+}
+
+.boards label input:checked ~ span  ion-icon{
+  color: rgb(255, 255, 255, 1);
+  filter: drop-shadow(0 0 5px #fff) 
+  drop-shadow(0 0 10px #fff)
+  drop-shadow(0 0 15px #fff);
+}
+
+
+.boards .bulb{
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 348px;
+  height: 408px;
+  pointer-events: none;
+  background: url(/img/bulb_off.jpg);
+  transition: 0.5s;
+}
+
+
+.boards label input:checked ~ .bulb{
+  background: url(/img/bulb_on.jpg);
+}
+
 /*Media Query */
 @media screen and (min-width: 768px) {
 
@@ -295,7 +359,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  
+
   .dashboard .main .boards_list .boards {
     width: 47%;
   }
