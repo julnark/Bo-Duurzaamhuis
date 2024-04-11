@@ -11,6 +11,7 @@ body {
   margin: 0px;
   background-color: aliceblue;
   min-height: 100vh;
+<<<<<<< HEAD
 }
 
 .material-symbols-outlined {
@@ -21,6 +22,8 @@ body {
     'opsz' 24;
 
   font-size: 24px;
+=======
+>>>>>>> 12bd5a688464690b30aa778d3511cfe83a2b1a01
 }
 
 .dashboard {
@@ -33,7 +36,6 @@ body {
 .dashboard .navigation {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   margin-top: 10px;
 }
 
@@ -54,10 +56,6 @@ body {
   margin-right: 5px;
   font-size: 30px;
   color: #727272;
-}
-
-.dashboard .navigation div {
-  margin-top: 10px;
 }
 
 /*== main dashboard*/
@@ -108,7 +106,6 @@ body {
 
 .dashboard .main .title h1 {
   font-size: 30px;
-  line-height: 0px;
 }
 
 .dashboard .main .title form {
@@ -130,7 +127,6 @@ body {
 /*project list*/
 .dashboard .main .boards_list h2 {
   font-size: 20px;
-  line-height: 0;
   margin-bottom: 10px;
 }
 
@@ -247,7 +243,6 @@ body {
   border-radius: 50px;
   background: #EAECCC;
   display: flex;
-  gap: 20px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -394,4 +389,28 @@ body {
     margin-top: 50px;
   }
 
+  /*timer*/
+
+  .card {
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    margin-left: 0px;
+  }
+
+  .timerText {
+    font-size: 150%;
+  }
+
+  .MinSecInput {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 10px;
+    justify-content: center;
+  }
+
+  .button {
+    padding: 5px 10px;
+    font-size: 15px;
+  }
 }
