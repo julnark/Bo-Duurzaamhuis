@@ -80,8 +80,8 @@ body {
 
 .dashboard .main .boards_list .boards .material-symbols-outlined.m1 {
   display: flex;
-  justify-content: flex-end;
-  margin: 0 0 0 0;
+  justify-content: space-between;
+  margin: 8px 0 0 0;
 }
 
 /*== ons project*/
@@ -276,16 +276,12 @@ body {
 
 /*  giorgina lamp aan en uit zetten*/
 .boards label {
-  position: relative;
-  width: 150px;
-  height: 75px;
-  background: #212121;
+  position: absolute; 
   border-radius: 10px;
 }
 
 .boards label span {
-  position: absolute;
-  top: 0;
+
   left: center;
   width: 75px;
   height: 75px;
@@ -295,43 +291,45 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
-.boards label input:checked~span {
+.boards input:checked~span {
   left: 75px;
   transition: 0.5s;
+}
+.boards input {
+  display: none;
 }
 
 .boards label span ion-icon {
   color: rgb(255, 255, 255, 0.25);
   font-size: 2em;
   transition: 0.5s;
-
 }
 
-.boards label input:checked ~ span  ion-icon{
+.boards input:checked ~ label span  ion-icon{
   color: rgb(255, 255, 255, 1);
   filter: drop-shadow(0 0 5px #fff) 
   drop-shadow(0 0 10px #fff)
   drop-shadow(0 0 15px #fff);
+
 }
 
 .boards .bulb{
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
   width: 348px;
   height: 408px;
   pointer-events: none;
-  background: url(/img/bulb_off.jpg);
-  background: url(/Bo-Duurzaamhuis/img/bulb_off.jpg);
+  background: url(../img/bulb_off.jpg);
+  /* background: url(/Bo-Duurzaamhuis/img/bulb_off.jpg); */ /* krijg je ziek erge error die je niet wilt :) */
   transition: 0.5s;
+
 }
 
-.boards label input:checked ~ .bulb{
-  background: url(/img/bulb_on.jpg);
-  background: url(/Bo-Duurzaamhuis/img/bulb_on.jpg);
+.boards input:checked ~ .bulb{
+  background: url(../img/bulb_on.jpg);
+
+  /* background: url(/Bo-Duurzaamhuis/img/bulb_on.jpg); */ /* krijg je ziek erge error die je niet wilt :) */
 }
 
 /*Media Query */
