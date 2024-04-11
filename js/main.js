@@ -1,5 +1,4 @@
 //Grafiek Voor Energie Verbruik
-const ctx = document.getElementById('myChart');
 document.addEventListener('DOMContentLoaded', function () {
     const ctx = document.getElementById('myChart');
 
@@ -156,4 +155,91 @@ function updateTimerDisplay() {
     secondsTimer.innerText = seconds < 10 ? "0" + seconds : seconds;
     minutesTimer.innerText = minutes < 10 ? "0" + minutes : minutes;
 }
+
+//Grafiek Zonnepanelen
+const Zonnepanelenctx = document.getElementById('ZonnepanelenChart');
+document.addEventListener('DOMContentLoaded', function () {
+    new Chart(Zonnepanelenctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mrt', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dec'],
+            datasets: [{
+                label: 'Opbrengst Zonnenpanelen KWH',
+                data: [20, 26,32, 25, 45, 57, 63, 53, 47, 42, 32, 20],
+                backgroundColor: [
+                    '#4F6F52',
+                    '#739072',
+                    '#86A789',
+                    '#D2E3C8',
+                    '#5F8670',
+                    '#C3E2C2',
+                    '#EAECCC',
+                    '#527853',
+                    '#5F6F52',
+                    '#A9B388',
+                    '#C7DCA7',
+                    '#9FBB73'
+                ],
+                borderColor: [
+                    '#405D42',
+                    '#5A7E5E',
+                    '#6E9470',
+                    '#B9D0B2',
+                    '#4B725C',
+                    '#A9D9AC',
+                    '#D6D4B3',
+                    '#3E5B42',
+                    '#4B5D42',
+                    '#92A273',
+                    '#ADC491',
+                    '#879A5E'
+                ],
+                
+                borderWidth: 1
+            },
+            {
+                label: 'Gebruik Zonnenpanelen KWH',
+                data: [53, 57, 49, 59, 37, 30, 26, 33, 49, 50, 57, 67],
+                backgroundColor: [
+                    '#DBAFA0',
+                    '#BB8493',
+                    '#704264',
+                    '#49243E',
+                    '#DBAFA0',
+                    '#BB8493',
+                    '#704264',
+                    '#49243E',
+                    '#DBAFA0',
+                    '#BB8493',
+                    '#704264',
+                    '#49243E'
+                ],
+                borderColor: [
+                    '#DBAFA0',
+                    '#BB8493',
+                    '#704264',
+                    '#49243E',
+                    '#DBAFA0',
+                    '#BB8493',
+                    '#704264',
+                    '#49243E',
+                    '#DBAFA0',
+                    '#BB8493',
+                    '#704264',
+                    '#49243E'
+                ],
+                
+                borderWidth: 1
+            }]
+        },
+        
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+});
 
