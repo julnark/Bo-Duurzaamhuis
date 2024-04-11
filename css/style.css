@@ -10,6 +10,7 @@ body {
   font-style: normal;
   margin: 0px;
   background-color: aliceblue;
+    min-height: 100vh;
 }
 
 .material-symbols-outlined {
@@ -236,6 +237,53 @@ body {
 
 .category_color8 {
   background-color: #A3C9AA !important;
+}
+
+/*Milan Lamp na een bepaalde tijd uitzetten*/
+.card {
+  width: 400px;
+  height: 400px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  background: #EAECCC;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 80px;
+}
+
+.card--stopwatch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.timerText {
+  font-size: 200%;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.button--start {
+  background: #D2E3C8;
+}
+
+.button--stop {
+  background: #EF9F9F;
+}
+
+.button--reset {
+  background: #DAEAF1;
 }
 
 /*Media Query */

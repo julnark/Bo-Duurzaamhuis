@@ -137,7 +137,23 @@
                 <div class="boards board7"><!--Boards7 Na een bepaalde tijd lamp uit Milan-->
                     <div class="category category_color7"></div>
                     <h2>Lamp Aan/Uit Zetten na een bepaalde tijd</h2>
-                    <p>Zet lamp na 5 minuten uit</p>
+                    <p>Zet lamp na bepaalde tijd uit</p>
+                    <div class="card card--stopwatch">
+                        <div>
+                            <input type="number" id="js--minutesInput" placeholder="Minutes">
+                            <input type="number" id="js--secondsInput" placeholder="Seconds">
+                        </div>
+                        <div>
+                            <span class="timerText" id="js--minutesTimer">0</span>
+                            <span class="timerText">:</span>
+                            <span class="timerText" id="js--secondsTimer">0</span>
+                        </div>
+                        <div class="buttonWrapper">
+                            <button class="button button--start" id="js--start">Start</button>
+                            <button class="button button--stop" id="js--stop">Stop</button>
+                            <button class="button button--reset" id="js--reset">Reset</button>
+                        </div>
+                    </div>
                     <span class="material-symbols-outlined m1">
                         more_vert
                     </span>
@@ -171,7 +187,7 @@
                         more_vert
                     </span>
                 </div>
-            </div><!--Boards9 End--> 
+            </div><!--Boards9 End-->
 
         </section><!--SecondaryEND-->
 

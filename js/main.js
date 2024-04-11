@@ -1,3 +1,4 @@
+//Grafiek Voor Energie Verbruik
 const ctx = document.getElementById('myChart');
 document.addEventListener('DOMContentLoaded', function () {
     const ctx = document.getElementById('myChart');
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+//Grafiek voor Eigen Inbreng
 document.addEventListener('DOMContentLoaded', function () {
     const eigenInbrengCtx = document.getElementById('eigenInbrengChart').getContext('2d');
 
@@ -91,3 +93,67 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+//Timer voor na een bepaalde tijd licht uit doen
+const startButton = document.getElementById("js--start");
+const stopButton = document.getElementById("js--stop");
+const resetButton = document.getElementById("js--reset");
+const minutesInput = document.getElementById("js--minutesInput");
+const secondsInput = document.getElementById("js--secondsInput");
+let seconds = 0;
+let minutes = 0;
+let running = false;
+
+const secondsTimer = document.getElementById("js--secondsTimer");
+const minutesTimer = document.getElementById("js--minutesTimer");
+
+let timer;
+
+startButton.onclick = function () {
+    if (running === true) {
+        return;
+    }
+    running = true;
+    const totalSeconds = parseInt(minutesInput.value) * 60 + parseInt(secondsInput.value);
+    if (isNaN(totalSeconds) || totalSeconds <= 0) {
+        return;
+    }
+    seconds = totalSeconds % 60;
+    minutes = Math.floor(totalSeconds / 60);
+    updateTimerDisplay();
+    timer = setInterval(function () {
+        if (seconds === 0 && minutes === 0) {
+            clearInterval(timer);
+            running = false;
+            return;
+        }
+        if (seconds === 0) {
+            minutes--;
+            seconds = 59;
+        } else {
+            seconds--;
+        }
+        updateTimerDisplay();
+    }, 1000);
+}
+
+stopButton.onclick = function () {
+    clearInterval(timer);
+    running = false;
+}
+
+resetButton.onclick = function () {
+    clearInterval(timer);
+    running = false;
+    minutes = 0;
+    seconds = 0;
+    minutesInput.value = "";
+    secondsInput.value = "";
+    updateTimerDisplay();
+}
+
+function updateTimerDisplay() {
+    secondsTimer.innerText = seconds < 10 ? "0" + seconds : seconds;
+    minutesTimer.innerText = minutes < 10 ? "0" + minutes : minutes;
+}
+
