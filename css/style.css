@@ -182,6 +182,8 @@ body {
   padding: 15px;
   position: relative;
   margin-bottom: 30px;
+  width: 100%;
+  height: auto;
 }
 
 .dashboard .secondary .Inbreng .chart h2 {
@@ -197,6 +199,10 @@ body {
 
 }
 
+.dashboard .secondary .Verbruik .chart {
+  height: calc(100% - 30px);
+}
+
 .dashboard .secondary .Verbruik .chart h2 {
   display: flex;
   justify-content: center;
@@ -208,6 +214,11 @@ body {
   margin-bottom: 10px;
   color: #727272;
 
+}
+
+#myChart{
+  height: auto;
+  width: 100%;
 }
 
 .dashboard .secondary .chart .category {
