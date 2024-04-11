@@ -11,19 +11,6 @@ body {
   margin: 0px;
   background-color: aliceblue;
   min-height: 100vh;
-<<<<<<< HEAD
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
-
-  font-size: 24px;
-=======
->>>>>>> 12bd5a688464690b30aa778d3511cfe83a2b1a01
 }
 
 .dashboard {
