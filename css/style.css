@@ -27,14 +27,14 @@ body {
 }
 
 .dashboard .navigation img.logo {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
 }
 
 .dashboard .navigation img.user {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
 }
 
@@ -182,8 +182,6 @@ body {
   padding: 15px;
   position: relative;
   margin-bottom: 30px;
-  width: 100%;
-  height: auto;
 }
 
 .dashboard .secondary .Inbreng .chart h2 {
@@ -276,7 +274,7 @@ body {
 
 /*  giorgina lamp aan en uit zetten*/
 .boards label {
-  position: absolute; 
+  position: absolute;
   border-radius: 10px;
 }
 
@@ -291,7 +289,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .boards input:checked~span {
@@ -299,6 +297,7 @@ body {
   transition: 0.5s;
   display: grid;
 }
+
 .boards input {
   display: none;
 }
@@ -309,28 +308,28 @@ body {
   transition: 0.5s;
 }
 
-.boards input:checked ~ label span  ion-icon{
+.boards input:checked~label span ion-icon {
   color: rgb(255, 255, 255, 1);
-  filter: drop-shadow(0 0 5px #fff) 
-  drop-shadow(0 0 10px #fff)
-  drop-shadow(0 0 15px #fff);
+  filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
 
 }
 
-.boards .bulb{
+.boards .bulb {
   width: 348px;
   height: 408px;
   pointer-events: none;
   background: url(../img/bulb_off.jpg);
-  /* background: url(/Bo-Duurzaamhuis/img/bulb_off.jpg); */ /* krijg je ziek erge error die je niet wilt :) */
+  /* background: url(/Bo-Duurzaamhuis/img/bulb_off.jpg); */
+  /* krijg je ziek erge error die je niet wilt :) */
   transition: 0.5s;
 
 }
 
-.boards input:checked ~ .bulb{
+.boards input:checked~.bulb {
   background: url(../img/bulb_on.jpg);
 
-  /* background: url(/Bo-Duurzaamhuis/img/bulb_on.jpg); */ /* krijg je ziek erge error die je niet wilt :) */
+  /* background: url(/Bo-Duurzaamhuis/img/bulb_on.jpg); */
+  /* krijg je ziek erge error die je niet wilt :) */
 }
 
 /*Media Query */
@@ -401,4 +400,35 @@ body {
     padding: 5px 10px;
     font-size: 15px;
   }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .dashboard .navigation,
+  .dashboard .navigation .material-symbols-outlined,
+  .secondary {
+    display: block;
+  }
+
+  .dashboard .navigation {
+    width: 60px;
+    position: fixed;
+    z-index: 10;
+  }
+
+  .main {
+    width: 65%;
+    margin-left: 90PX;
+    margin-right: 20px;
+  }
+
+  .secondary {
+    width: 27%;
+    padding-top: 0;
+    position: fixed;
+    top: 20px;
+    right: 0px;
+    background-color: transparent;
+  }
+
 }
