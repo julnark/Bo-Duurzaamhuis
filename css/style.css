@@ -332,6 +332,16 @@ body {
   /* krijg je ziek erge error die je niet wilt :) */
 }
 
+
+/* thermostaat dashboard 2 giorgina*/
+div.container {
+width: 600px;
+
+}
+
+
+
+
 /*Media Query */
 @media screen and (min-width: 768px) {
 
