@@ -107,50 +107,54 @@ const secondsTimer = document.getElementById("js--secondsTimer");
 const minutesTimer = document.getElementById("js--minutesTimer");
 
 let timer;
+if (startButton !== null) {
 
-startButton.onclick = function () {
-    if (running === true) {
-        return;
-    }
-    running = true;
-    const totalSeconds = parseInt(minutesInput.value) * 60 + parseInt(secondsInput.value);
-    if (isNaN(totalSeconds) || totalSeconds <= 0) {
-        return;
-    }
-    seconds = totalSeconds % 60;
-    minutes = Math.floor(totalSeconds / 60);
-    updateTimerDisplay();
-    timer = setInterval(function () {
-        if (seconds === 0 && minutes === 0) {
-            clearInterval(timer);
-            running = false;
+
+    startButton.onclick = function () {
+        if (running === true) {
             return;
         }
-        if (seconds === 0) {
-            minutes--;
-            seconds = 59;
-        } else {
-            seconds--;
+        running = true;
+        const totalSeconds = parseInt(minutesInput.value) * 60 + parseInt(secondsInput.value);
+        if (isNaN(totalSeconds) || totalSeconds <= 0) {
+            return;
         }
+        seconds = totalSeconds % 60;
+        minutes = Math.floor(totalSeconds / 60);
         updateTimerDisplay();
-    }, 1000);
+        timer = setInterval(function () {
+            if (seconds === 0 && minutes === 0) {
+                clearInterval(timer);
+                running = false;
+                return;
+            }
+            if (seconds === 0) {
+                minutes--;
+                seconds = 59;
+            } else {
+                seconds--;
+            }
+            updateTimerDisplay();
+        }, 1000);
+    }
 }
-
-stopButton.onclick = function () {
-    clearInterval(timer);
-    running = false;
+if (stopButton !== null) {  
+    stopButton.onclick = function () {
+        clearInterval(timer);
+        running = false;
+    }
 }
-
-resetButton.onclick = function () {
-    clearInterval(timer);
-    running = false;
-    minutes = 0;
-    seconds = 0;
-    minutesInput.value = "";
-    secondsInput.value = "";
-    updateTimerDisplay();
+if (resetButton !== null) {
+    resetButton.onclick = function () {
+        clearInterval(timer);
+        running = false;
+        minutes = 0;
+        seconds = 0;
+        minutesInput.value = "";
+        secondsInput.value = "";
+        updateTimerDisplay();
+    }
 }
-
 function updateTimerDisplay() {
     secondsTimer.innerText = seconds < 10 ? "0" + seconds : seconds;
     minutesTimer.innerText = minutes < 10 ? "0" + minutes : minutes;
@@ -165,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
             labels: ['Jan', 'Feb', 'Mrt', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dec'],
             datasets: [{
                 label: 'Opbrengst Zonnenpanelen KWH',
-                data: [20, 26,32, 25, 45, 57, 63, 53, 47, 42, 32, 20],
+                data: [20, 26, 32, 25, 45, 57, 63, 53, 47, 42, 32, 20],
                 backgroundColor: [
                     '#4F6F52',
                     '#739072',
@@ -194,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     '#ADC491',
                     '#879A5E'
                 ],
-                
+
                 borderWidth: 1
             },
             {
@@ -228,11 +232,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     '#704264',
                     '#49243E'
                 ],
-                
+
                 borderWidth: 1
             }]
         },
-        
+
         options: {
             scales: {
                 y: {
@@ -243,3 +247,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// dashboard 3 giorgina temp// 
+$(document).ready(function () {
+    console.log('test');
+    $("#slider").roundSlider({
+        sliderType: "min-range",
+        circleShape: "pie",
+        startAngle: "315",
+        lineCap: "round",
+        radius: 120,
+        width: 32,
+        min: 16,
+        max: 32,
+        svgMode: true,
+        handleSize: "+8",
+        pathColor: "#e3e4ed",
+        borderWidth: 0,
+        editableTooltip: false,
+        startValue: 0,
+        rangeColor: "#97E3FE"
+    })
+});

@@ -12,12 +12,17 @@ body {
   background-color: aliceblue;
   min-height: 100vh;
 }
-
+.material-symbols-outlined {
+  white-space: wrap;
+  line-height: initial;
+}
 .dashboard {
   padding: 0px 15px;
   margin: 0px auto;
 }
-
+p {
+  font-size: 14px;
+}
 
 /*== styled navigation*/
 
@@ -273,7 +278,7 @@ body {
   background: #DAEAF1;
 }
 
-/*  giorgina lamp aan en uit zetten*/
+/*  board 1 giorgina lamp aan en uit zetten*/
 .boards label {
   position: absolute;
   border-radius: 10px;
@@ -335,10 +340,10 @@ body {
 
 
 /* thermostaat dashboard 2 giorgina*/
-div.container {
+div.second_container {
   width: 300px;
   height: 600px;
-  background:  #f2f5fa;
+  background: #f2f5fa;
   border-radius: 30px;
 }
 
@@ -457,6 +462,129 @@ div.menu>i.active {
   -webkit-text-fill-color: transparent;
 }
 
+
+/* dashboard 3 woonkamer/buiten temperatuur*/
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.widget {
+  width: 320px;
+  background-image: linear-gradient(135deg, #ffffff, #eef0f7);
+  border-radius: 36px;
+  box-shadow: -16px -16px 24px rgba(255, 255, 255, 0.3),
+    16px 16px 24px rgba(0, 0, 0, 0.08), ;
+}
+
+.container {
+  padding: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 58px;
+}
+
+.header span {
+  position: relative;
+  font-size: 12px;
+  padding-left: 14px;
+  font-weight: 300;
+}
+
+.header span:before {
+  content: '';
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  top: calc(50% - 3px);
+  left: 0;
+  border-radius: 50%;
+  background-color: #9dfbcd;
+}
+
+.header input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.header label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  background-image: linear-gradient(135deg, #f0f1fa, #ffffff);
+  border-radius: 50%;
+  box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.08), -4px -4px #ffffff;
+  transition: all linear 0.3s;
+}
+
+.header input:checked+label {
+  color: #ffffff;
+  background-image: linear-gradient(135deg, #97e3fe, #5eb5de);
+  box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.08),
+    -4px -4px #ffffff,
+    inset 6px 6px 18px rgba(0, 0, 0, 0.015),
+    inset -4px -4px rgba(255, 255, 255, 0.3);
+}
+
+.rs-bar {
+  z-index: 0 !important;
+}
+
+.rs-tooltip-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  width: 150px;
+  font-size: 52px;
+  border-radius: 50%;
+  background-image: linear-gradient(135deg, #97e3fe, #5eb3de);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 4px #ffffff;
+}
+
+.rs-tooltip-text:after {
+  content: "˚";
+  position: relative;
+  font-size: 32px;
+  top: -14px;
+  margin-right: -8px;
+}
+
+.rs-handle {
+  background-color: #5eb3de;
+  border: 12px solid #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+/* temp-meten */
+.temp-meten {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin-top: 8px;
+}
+.temp-meten__card {
+  flex-basis: 50%;
+  text-align: center;
+  padding: 4px;
+  border-radius: 12px;
+  background-color: #fff4f4;
+}
+.temp-meten__card p {
+  margin-bottom: 0;
+}
 /*Media Query */
 @media screen and (min-width: 768px) {
 
@@ -529,22 +657,17 @@ div.menu>i.active {
 
 @media screen and (min-width: 1024px) {
 
-  .dashboard .navigation,
-  .dashboard .navigation .material-symbols-outlined,
-  .secondary {
-    display: block;
-  }
-
-  .dashboard .navigation {
-    width: 60px;
-    position: fixed;
-    z-index: 10;
-  }
-
   .main {
-    width: 65%;
-    margin-left: 90PX;
+    width: calc(100% - 120px);
+    margin-left: 90px;
     margin-right: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .main-nav {
+    width: 100%;
   }
 
   .secondary {
