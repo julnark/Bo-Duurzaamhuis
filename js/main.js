@@ -268,3 +268,133 @@ $(document).ready(function () {
         rangeColor: "#97E3FE"
     })
 });
+
+//Weersverwachting Julnar
+const container = document.querySelector('.boards.boards-weer');
+const search = document.querySelector('.search-box button');
+const weatherBox = document.querySelector('.weather-box');
+const weatherDetails = document.querySelector('.weather-details');
+const error404 = document.querySelector('.not-found');
+const cityHide = document.querySelector('.city-hide');
+
+
+search.addEventListener('click', () => {
+    const APIKey = 'bbd65ae61d254bacb7b1e3c5d280cdd5';
+    const city = document.querySelector('.search-box input').value;
+
+    if (city == '')
+        return;
+
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}')
+        .then(response => response.json()).then(json => {
+
+            if (json.cood == '404') {
+                cityHide.textContent = city;
+                container.computedStyleMap.height = '400px';
+                weatherBox.classList.add('active');
+                weatherDetails.classList.add('active');
+                error404.classList.add('active');
+
+                return;
+            }
+
+            const image = document.querySelector('.weather-box img');
+            const temperature = document.querySelector('.weather-box .temperature');
+            const description = document.querySelector('.weather-box .description');
+            const humidity = document.querySelector('.weather-details .humidity span');
+            const wind = document.querySelector('.weather-details .wind span');
+
+            if (city.textContent == city) {
+                return;
+            } else {
+                cityHide.textContent = city;
+
+                container.computedStyleMap.height = '555px';
+                weatherBox.classList.add('active');
+                weatherDetails.classList.add('active');
+                error404.classList.remove('active');
+                container.classList.add('active');
+
+                setTimeout(() => {
+                    container.classList.remove('active');
+                }, 2500);
+
+                switch (json.weather[0].main) {
+                    case 'Clear':
+                        image.src = 'img/clear.png'
+                        break;
+                    case 'Rain':
+                        image.src = 'img/rain.png'
+                        break;
+                    case 'Snow':
+                        image.src = 'img/snow.png'
+                        break;
+                    case 'Cloauds':
+                        image.src = 'img/cloud.png'
+                        break;
+                    case 'Mist':
+                        image.src = 'img/mist.png'
+                        break;
+                    case 'Haze':
+                        image.src = 'img/mist.png'
+                        break;
+                    default:
+                        image.src = 'img/cloud.png';
+
+                        temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
+                        description.innerHTML = `${json.weather[0].description}`;
+                        humidity.innerHTML = `${json.main.humidity}%`;
+                        wind.innerHTML = `${parseInt(json.wind.speed)}KM/H`;
+
+                        const infoWeather = document.querySelector('.info-weather');
+                        const infoHumidity = document.querySelector('.info-humidity');
+                        const infoWind = document.querySelector('.info-wind');
+
+                        const elCloneinfoWeather = infoWeather.cloneNode(true);
+                        const elCloneinfohumidity = infoHumidity.cloneNode(true);
+                        const elCloneinfoWind = infoWind.cloneNode(true);
+
+                        elCloneinfoWeather.id = 'clone-info-weather';
+                        elCloneinfoWeather.classList.add('active-clone');
+
+                        elCloneinfohumidity.id = 'clone-info-humidity';
+                        elCloneinfohumidity.classList.add('active-clone');
+
+                        elCloneinfoWind.id = 'clone-info-wind';
+                        elCloneinfoWind.classList.add('active-clone');
+
+                        setTimeout(() => {
+                            infoWeather.insertAdjacentElement("afterend", elCloneinfoWeather)
+                            infoHumidity.insertAdjacentElement("afterend", elCloneinfohumidity)
+                            infoWind.insertAdjacentElement("afterend", elCloneinfoWind)
+
+                        } ,2200)
+
+                        const cloneInfoWeather = document.querySelector('.info-waether.active-clone');
+                        const totalcloneInfoWeather = cloneInfoWeather.lengt;
+                        const cloneinfoWeatherFirst = cloneInfoWeather[0]
+
+                        const cloneInfoHumidity = document.querySelector('.info-humidity.active-clone');
+                        const totalcloneInfoHumidity = cloneInfoHumidity.length;
+                        const cloneinfoHumidityFirst = cloneInfoHumidity[0]
+
+                        const cloneInfoWind = document.querySelector('.info-wind.active-clone');
+                        const totalcloneInfoWind = cloneInfoWeather.length;
+                        const cloneinfoWindFirst = cloneInfoWind[0]
+
+                        if(totalcloneInfoWeather > 0){
+                            cloneinfoWeatherFirst.classList.remove('active-clone')
+                            cloneinfoHumidityFirst.classList.remove('active-clone')
+                            cloneinfoWindFirst.classList.remove('active-clone')
+
+                            setTimeout(() =>{
+                                cloneinfoWeatherFirst.remove();
+                                cloneinfoHumidityFirst.remove();
+                                cloneinfoWindFirst.remove();
+
+                            }, 2200)
+                        }
+                }
+            }
+        })
+})
