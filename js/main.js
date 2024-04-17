@@ -1,5 +1,5 @@
 //Grafiek Voor Energie Verbruik
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function Energie() {
     const ctx = document.getElementById('myChart');
 
     new Chart(ctx, {
@@ -138,7 +138,7 @@ if (startButton !== null) {
         }, 1000);
     }
 }
-if (stopButton !== null) {  
+if (stopButton !== null) {
     stopButton.onclick = function () {
         clearInterval(timer);
         running = false;
@@ -161,8 +161,8 @@ function updateTimerDisplay() {
 }
 
 //Grafiek Zonnepanelen
-const Zonnepanelenctx = document.getElementById('ZonnepanelenChart');
 document.addEventListener('DOMContentLoaded', function () {
+    const Zonnepanelenctx = document.getElementById('ZonnepanelenChart');
     new Chart(Zonnepanelenctx, {
         type: 'line',
         data: {
