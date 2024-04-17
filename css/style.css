@@ -806,10 +806,72 @@ section {
 .actove-clone#clone-info-wind span{
   transform: translateY(0%);
 }
+/* sunrise sunset */
+.container {
+  width: 400px;
+  max-width: 100%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
 
+h2 {
+  text-align: center;
+  margin: 10px;
+}
+
+.kaartje{
+  width: 100%;
+  background-image: url(https://hdqwalls.com/download/red-dark-pixel-art-sunset-8k-uu-7680x4320.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 30px 10px;
+  box-shadow: 0 5px 30px rgba(87, 11, 16, 0.5);
+  position: relative;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between; /* Plaatst de flex-container-items zo ver mogelijk uit elkaar */
+}
+
+.sunrise, .sunset {
+  flex: 1; /* Geeft de flex-container-items dezelfde flexibele grootte */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sunrise-label, .sunset-label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.sunrise-label {
+  color: #FAE453;
+}
+
+.sunset-label {
+  color: aqua;
+}
+
+#sunrise-time,
+#sunset-time {
+  font-size: 24p;
+  color: white;
+}
+.sunrise-time {
+  color: white;
+}
+
+.sunset-time {
+  color: white;
+}
 /*Media Query */
 @media screen and (min-width: 768px) {
-
+  .kaartje> {
+    width: 50px;
+}
   /*main*/
   .main .boards_list {
     display: flex;
