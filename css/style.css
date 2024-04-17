@@ -569,7 +569,7 @@ section {
 }
 
 /*Weersverwachting*/
-.boards.boards-weer {
+.dashboard .main .boards.boards-weer {
   position: relative;
   width: 400px;
   height: 100px;
@@ -578,7 +578,7 @@ section {
   border: 2px solid rgba(255, 255, 255, .2);
   border-radius: 16px;
   padding: 20px;
-  color: #fff;
+  color: #86A789;
   transition: height .6s ease;
 }
 
@@ -597,7 +597,6 @@ section {
 }
 
 .search-box input {
-  /* position: absolute; */
   width: 100%;
   height: 100%;
   background-color: transparent;
@@ -612,7 +611,7 @@ section {
 }
 
 .search-box input::placeholder {
-  color: #fff;
+  color: #86A789;
   text-transform: capitalize;
 }
 
@@ -625,7 +624,7 @@ section {
   border: none;
   outline: none;
   font-size: 28px;
-  color: #fff;
+  color: #86A789;
   padding: 0 40px 0 5px;
   cursor: pointer;
 }
