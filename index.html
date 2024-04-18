@@ -22,7 +22,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--Grafieken link voor CHARTJS-->
     <script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
-    <script src="js/main.js"></script> <!--Link naar JS documment-->
+    <script src="js/main.js" defer></script> <!--Link naar JS documment-->
 
     <title>Duurzaamhuis</title>
 
@@ -276,12 +276,12 @@
                         <div class="kaartje">
                             <div class="sunrise">
                                 <p class="sunrise-label">sunrise</p>
-                                <p class="sunrise-time">06:37</p>
+                                <p id="js--zonsOpkomstapi"></p>
                                 <H1 id="sunrise-time">🌅</H1>
                             </div>
                             <div class="sunset">
                                 <p class="sunset-label">sunset</p>
-                                <p class="sunset-time">20:41</p>
+                                <p id="js--zonsOnderGangapi"></p>
                                 <H1 id="sunset-time">🌙</H1>
                             </div>
                         </div>

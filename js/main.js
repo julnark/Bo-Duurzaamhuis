@@ -395,3 +395,20 @@ $(document).ready(function () {
             })
     })
 });
+
+//Milan Zonsopkomst en ondergang
+const zonsOpkomstApi = document.getElementById("js--zonsOpkomstapi");
+const zonsOndergangApi = document.getElementById("js--zonsOnderGangapi");
+
+console.log("test");
+
+fetch("https://api.sunrise-sunset.org/json?lat=52.37403&lng=4.88969&formatted=0")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        const sunrise = new Date(data.results.sunrise);
+        const sunset = new Date(data.results.sunset);
+
+        zonsOpkomstApi.innerHTML = sunrise.toLocaleTimeString();
+        zonsOndergangApi.innerHTML =sunset.toLocaleTimeString();
+    })
