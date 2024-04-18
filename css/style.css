@@ -187,6 +187,8 @@ p {
   padding: 15px;
   position: relative;
   margin-bottom: 30px;
+  border-radius: 10px;
+  width: 400px;
 }
 
 .dashboard .secondary .Inbreng .chart h2 {
@@ -203,7 +205,7 @@ p {
 }
 
 .dashboard .secondary .Verbruik .chart {
-  height: calc(100% - 30px);
+  height: 510px;
 }
 
 .dashboard .secondary .Verbruik .chart h2 {
@@ -276,7 +278,7 @@ p {
   background: #DAEAF1;
 }
 
-/*  board 1 giorgina lamp aan en uit zetten*/
+/*board 1 giorgina lamp aan en uit zetten*/
 .boards label {
   position: absolute;
   border-radius: 10px;
@@ -292,6 +294,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 90px;
+  margin-top: 50px;
 }
 
 .boards input:checked~span {
@@ -299,10 +303,6 @@ p {
   transition: 0.5s;
   display: grid;
 }
-/* 
-.boards input {
-  display: none;
-} */
 
 .boards label span ion-icon {
   color: rgb(255, 255, 255, 0.25);
@@ -321,18 +321,22 @@ p {
   pointer-events: none;
   background: url(../img/bulb_off.jpg);
   transition: 0.5s;
+  margin-left: 90px;
+  margin-top: 50px;
 }
 
 .boards input:checked~.bulb {
   background: url(../img/bulb_on.jpg);
+  margin-left: 90px;
 }
 
-/* thermostaat dashboard 2 giorgina*/
+/*thermostaat dashboard 2 giorgina*/
 div.second_container {
   width: 300px;
   height: 600px;
   background: #f2f5fa;
   border-radius: 30px;
+  margin-left: 120px;
 }
 
 .font14 {
@@ -372,14 +376,14 @@ div.second_container {
 }
 
 .blue {
-  color: #2CD9E5;
+  color: #739072;
 }
 
 div.outer {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: conic-gradient(#1aebef 0deg, #2cd9e5 135deg, #f4f5f7 0deg);
+  background: conic-gradient(#739072 0deg, #86A789 135deg, #f4f5f7 0deg);
   box-shadow: 0px 0px 20px 0px rgb(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
@@ -416,7 +420,7 @@ div.marker::after {
   content: '24';
   font-weight: 700;
   font-size: 10px;
-  color: #2cd9e5;
+  color: #739072;
   display: inline-block;
   transform: rotate(45deg);
   margin-top: 3px;
@@ -440,7 +444,7 @@ div.menu>i {
 }
 
 div.menu>i.active {
-  background: linear-gradient(to bottom, #2fddea, #5bc1de);
+  background: linear-gradient(to bottom, #739072, #86A789);
   -webkit-backdrop-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -464,6 +468,7 @@ section {
 
 .container {
   padding: 30px;
+  margin-left: 20px;
 }
 
 .header {
@@ -487,7 +492,7 @@ section {
   top: calc(50% - 3px);
   left: 0;
   border-radius: 50%;
-  background-color: #9dfbcd;
+  background-color: #C3E2C2;
 }
 
 .header input {
@@ -510,7 +515,7 @@ section {
 
 .header input:checked+label {
   color: #ffffff;
-  background-image: linear-gradient(135deg, #97e3fe, #5eb5de);
+  background-image: linear-gradient(135deg, #C3E2C2, #C3E2C2);
   box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.08),
     -4px -4px #ffffff,
     inset 6px 6px 18px rgba(0, 0, 0, 0.015),
@@ -529,7 +534,7 @@ section {
   width: 150px;
   font-size: 52px;
   border-radius: 50%;
-  background-image: linear-gradient(135deg, #97e3fe, #5eb3de);
+  background-image: linear-gradient(135deg, #C3e2c2, #86A789);
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 4px #ffffff;
 }
 
@@ -542,7 +547,7 @@ section {
 }
 
 .rs-handle {
-  background-color: #5eb3de;
+  background-color: #C3E2C2;
   border: 12px solid #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, .1);
 }
@@ -712,7 +717,6 @@ section {
 
 .weather-details .info-humidity,
 .weather-details .wind .info-wind{
-  transform: translateY(-100%);
   overflow: hidden;
 }
 
@@ -759,7 +763,7 @@ section {
 }
 
 .not-found img {
-  width: 65%;
+  width: 150%;
 }
 
 .not-found p{
@@ -804,6 +808,7 @@ section {
 .actove-clone#clone-info-wind span{
   transform: translateY(0%);
 }
+
 /* sunrise sunset */
 .container {
   width: 400px;
@@ -821,6 +826,7 @@ h2 {
 
 .kaartje{
   width: 100%;
+  height: 200px;
   background-image: url(https://hdqwalls.com/download/red-dark-pixel-art-sunset-8k-uu-7680x4320.jpg);
   background-size: cover;
   background-position: center;
@@ -830,11 +836,11 @@ h2 {
   border-radius: 8px;
   text-align: center;
   display: flex;
-  justify-content: space-between; /* Plaatst de flex-container-items zo ver mogelijk uit elkaar */
+  justify-content: space-between; 
 }
 
 .sunrise, .sunset {
-  flex: 1; /* Geeft de flex-container-items dezelfde flexibele grootte */
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -858,6 +864,7 @@ h2 {
   font-size: 24p;
   color: white;
 }
+
 .sunrise-time {
   color: white;
 }
@@ -865,6 +872,7 @@ h2 {
 .sunset-time {
   color: white;
 }
+
 /*Media Query */
 @media screen and (min-width: 768px) {
   .kaartje> {
@@ -894,7 +902,7 @@ h2 {
 
   .dashboard .main .boards_list .boards.board7 {
     width: 47%;
-    margin-left: 190px;
+    margin-left: 300px;
     margin-bottom: 20px;
   }
 
@@ -905,10 +913,7 @@ h2 {
     flex-wrap: nowrap;
     width: 50%;
     gap: 120px;
-  }
-
-  .dashboard .secondary .chart span {
-    margin-top: 50px;
+    margin-left: 300px;
   }
 
   /*timer*/
@@ -917,6 +922,7 @@ h2 {
     width: 250px;
     height: 250px;
     margin-left: 0px;
+    margin-left: 150px;
   }
 
   .timerText {
@@ -937,7 +943,6 @@ h2 {
 }
 
 @media screen and (min-width: 1024px) {
-
   .main {
     width: calc(100% - 120px);
     margin-left: 90px;
@@ -951,13 +956,4 @@ h2 {
   .main-nav {
     width: 100%;
   }
-
-  .secondary {
-    width: 27%;
-    padding-top: 0;
-    top: 20px;
-    right: 0px;
-    background-color: transparent;
-  }
-
 }

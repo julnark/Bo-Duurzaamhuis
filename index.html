@@ -17,6 +17,12 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css"> <!--Link naaar CSS documment-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--Grafieken link voor CHARTJS-->
+    <script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
+    <script src="js/main.js"></script> <!--Link naar JS documment-->
 
     <title>Duurzaamhuis</title>
 
@@ -44,7 +50,7 @@
                 </span>
             </div>
 
-            <img src="img/voorbeeld_img.jpg" alt="gebruikersafbeelding" class="user">
+            <img src="img/dikkewasbeer.jpg" alt="gebruikersafbeelding" class="user">
 
         </section><!--navigationEND-->
 
@@ -52,7 +58,6 @@
             <div class="main-nav">
 
                 <div class="search"><!--Search-->
-
                     <form action="">
                         <input type="text" name="Search" id="Search" placeholder="Search Here">
                         <span class="material-symbols-outlined">
@@ -68,9 +73,9 @@
                             edit_note
                     </div>
                     </span>
-                </div>
+                </div><!--SearchEnd-->
 
-            </div><!--SearchEnd-->
+            </div>
 
             <div class="title">
 
@@ -96,9 +101,7 @@
                     <p>Aan / Uit Zetten</p>
                     <span class="material-symbols-outlined m1">
                         <div>
-
                             <input type="checkbox" name="bulb" id="bulb">
-
                             <label for="bulb">
                                 <span><ion-icon name="bulb-outline"></ion-icon></span>
                             </label>
@@ -175,9 +178,9 @@
                         <input type="text" placeholder="Enter your Location">
                         <button class="bx bx-search search-box__button"></button>
                     </div>
-            
+
                     <p class="city-hide">City Hide</p>
-            
+
                     <div class="weather-box">
                         <div class="box">
                             <div class="info-weather">
@@ -199,7 +202,7 @@
                                 <p>Humidity</p>
                             </div>
                         </div>
-            
+
                         <div class="wind">
                             <i class="bx bx-wind"></i>
                             <div class="text">
@@ -210,7 +213,7 @@
                             </div>
                         </div>
                     </div>
-            
+
                     <div class="not-found">
                         <div class="box">
                             <img src="img/404.png">
@@ -356,13 +359,6 @@
         </section><!--SecondaryEND-->
 
     </div> <!---dashboardEND-->
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--Grafieken link voor CHARTJS-->
-    <script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
-    <script src="js/main.js"></script> <!--Link naar JS documment-->
 </body>
 
 </html>
